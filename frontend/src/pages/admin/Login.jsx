@@ -33,7 +33,6 @@ export default function Login() {
 
       localStorage.setItem("adminToken", data.token);
       localStorage.setItem("adminUser", JSON.stringify(data.user));
-
       navigate("/admin/dashboard");
     } catch (err) {
       setError(err.message);
@@ -46,12 +45,10 @@ export default function Login() {
     <div className="flex min-h-screen items-center justify-center bg-slate-100 px-4">
       <form
         onSubmit={handleSubmit}
-        className="w-full max-w-md rounded-3xl bg-white p-8 shadow-lg"
+        className="w-full max-w-md rounded-3xl bg-white p-8 shadow-xl"
       >
         <h1 className="text-3xl font-black text-slate-900">Admin Login</h1>
-        <p className="mt-2 text-sm text-slate-500">
-          Login to access admin dashboard
-        </p>
+        <p className="mt-2 text-sm text-slate-500">Sign in to manage ITSAATHI</p>
 
         {error && (
           <div className="mt-4 rounded-2xl border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700">
@@ -68,7 +65,6 @@ export default function Login() {
             onChange={handleChange}
             className="rounded-2xl border border-slate-300 px-4 py-3 outline-none focus:border-sky-500"
           />
-
           <input
             type="password"
             name="password"
@@ -77,13 +73,12 @@ export default function Login() {
             onChange={handleChange}
             className="rounded-2xl border border-slate-300 px-4 py-3 outline-none focus:border-sky-500"
           />
-
           <button
             type="submit"
             disabled={loading}
             className="rounded-2xl bg-slate-900 px-5 py-3 font-semibold text-white transition hover:bg-sky-600 disabled:opacity-70"
           >
-            {loading ? "Logging in..." : "Login"}
+            {loading ? "Signing in..." : "Sign In"}
           </button>
         </div>
       </form>

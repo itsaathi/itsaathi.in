@@ -1,13 +1,22 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
+
 import Home from "./pages/Home";
 import Shop from "./pages/Shop";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Blogs from "./pages/Blogs";
 import Cart from "./pages/Cart";
+
 import Login from "./pages/admin/Login";
 import Dashboard from "./pages/admin/Dashboard";
-import ProtectedRoute from "./pages/components/admin/ProtectedRoute";
+import Products from "./pages/admin/Products";
+import Categories from "./pages/admin/Categories";
+import Banners from "./pages/admin/Banners";
+import Orders from "./pages/admin/Orders";
+import Contacts from "./pages/admin/Contacts";
+
+import ProtectedRoute from "./components/admin/ProtectedRoute";
+import AdminLayout from "./components/admin/AdminLayout";
 
 export default function App() {
   return (
@@ -22,13 +31,21 @@ export default function App() {
       <Route path="/admin/login" element={<Login />} />
 
       <Route
-        path="/admin/dashboard"
+        path="/admin"
         element={
           <ProtectedRoute>
-            <Dashboard />
+            <AdminLayout />
           </ProtectedRoute>
         }
-      />
+      >
+        <Route index element={<Navigate to="/admin/dashboard" replace />} />
+        <Route path="dashboard" element={<Dashboard />} />
+        <Route path="products" element={<Products />} />
+        <Route path="categories" element={<Categories />} />
+        <Route path="banners" element={<Banners />} />
+        <Route path="orders" element={<Orders />} />
+        <Route path="contacts" element={<Contacts />} />
+      </Route>
     </Routes>
   );
 }
