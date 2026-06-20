@@ -1,0 +1,122 @@
+export const featuredProducts = [
+  {
+    id: 1,
+    sku: "iSKU-V-0001",
+    name: "USB TO STEEL SOUND",
+    price: 80,
+    oldPrice: 299,
+    image: "https://d15i11igqd4zm.cloudfront.net/itsaathi/products/69ef39726c569.webp",
+    category: "CCTV Cables",
+  },
+  {
+    id: 2,
+    sku: "iSKU-V-90010",
+    name: "CONSOLE SCANNER CABLE ( USB TO RJ45 )",
+    price: 118,
+    oldPrice: 599,
+    image: "https://picsum.photos/seed/console-cable/600/600",
+    category: "Connectors",
+  },
+  {
+    id: 3,
+    sku: "iSKU-V-2204",
+    name: "USB TO VGA 3.0",
+    price: 330,
+    oldPrice: 999,
+    image: "https://picsum.photos/seed/usb-vga/600/600",
+    category: "Adapters",
+  },
+  {
+    id: 4,
+    sku: "SKU-V-2355",
+    name: "TYPE C TO 8 IN 1 DOCKET STATION",
+    price: 456,
+    oldPrice: 1200,
+    image: "https://picsum.photos/seed/dock-station/600/600",
+    category: "Hubs & Docks",
+  },
+];
+
+export const bestSellers = [
+  {
+    id: 5,
+    sku: "iSKU-V-90051",
+    name: "USB TO STEEL SOUND",
+    price: 80,
+    oldPrice: 299,
+    image: "https://picsum.photos/seed/steel-sound/600/600",
+    category: "Audio Cables",
+  },
+  {
+    id: 6,
+    sku: "iSKU-V-90050",
+    name: "USB PRINTER 3MTR ( WHITE )",
+    price: 47,
+    oldPrice: 150,
+    image: "https://picsum.photos/seed/printer-cable/600/600",
+    category: "Printer Cables",
+  },
+  {
+    id: 7,
+    sku: "iSKU-V-90030",
+    name: "NVME CASING { TRANSPARENT }",
+    price: 396,
+    oldPrice: 1100,
+    image: "https://picsum.photos/seed/nvme-casing/600/600",
+    category: "Storage Accessories",
+  },
+  {
+    id: 8,
+    sku: "iSKU-V-90026",
+    name: "FAN INTEL { FOR 12TH GEN }",
+    price: 456,
+    oldPrice: 1299,
+    image: "https://picsum.photos/seed/intel-fan/600/600",
+    category: "Cooling",
+  },
+];
+
+export const newArrivals = [
+  {
+    id: 9,
+    sku: "iSKU-V-90005",
+    name: "CASING LAPTOP ( 2.0 TRANSPARENT )",
+    price: 120,
+    oldPrice: 599,
+    image: "https://picsum.photos/seed/laptop-casing/600/600",
+    category: "Laptop Accessories",
+  },
+  {
+    id: 10,
+    sku: "SKU-V-2440",
+    name: "WIRE TRACKER TESTER",
+    price: 696,
+    oldPrice: 999,
+    image: "https://picsum.photos/seed/wire-tracker/600/600",
+    category: "Networking Tools",
+  },
+  {
+    id: 11,
+    sku: "iSKU-V-2215",
+    name: "VIDEO BALUN { PASSIVE 8CH PAIR }",
+    price: 1620,
+    oldPrice: 4800,
+    image: "https://picsum.photos/seed/video-balun/600/600",
+    category: "CCTV Accessories",
+  },
+  {
+    id: 12,
+    sku: "SKU-V-2404",
+    name: "USB TO SERIAL FEMALE ( PINK )",
+    price: 174,
+    oldPrice: 555,
+    image: "https://picsum.photos/seed/usb-serial/600/600",
+    category: "Connectors",
+  },
+];
+
+export const allProducts = [
+  ...featuredProducts,
+  ...bestSellers,
+  ...newArrivals,
+];
